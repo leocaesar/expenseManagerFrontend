@@ -4,7 +4,7 @@ export interface ExpenseCategories {
 }
 
 
-export class ExpenseCategories{
+export class ExpenseCategoriesModel{
   constructor(
     public id: number,
     public name: string,

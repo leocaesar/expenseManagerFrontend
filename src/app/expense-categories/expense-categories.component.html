@@ -1,1 +1,13 @@
-<p>expense-categories works!</p>
+<button (click)="addExpenseCategories()">ADD</button>
+<div *ngFor="let expenseCategories of listExpenseCategories">
+  <ul class="list-group ">
+    <li class="list-group-item list-group-item-dark">{{expenseCategories.id}}</li>
+    <li class="list-group-item list-group-item-dark">{{expenseCategories.name}}</li>
+    <!--    <li class="list-group-item list-group-item-dark">-->
+    <!--      <button class="btn btn-warning" (click)="updateExpense(expenseCategories.id)">Update</button>-->
+    <!--    </li>-->
+    <!--    <li class="list-group-item list-group-item-dark">-->
+    <!--      <button class="btn btn-danger" (click)="deleteExpense(expenseCategories.id)">Delete</button>-->
+    <!--    </li>-->
+  </ul>
+</div>

@@ -2,26 +2,24 @@
 <html>
 <body>
 
-<form action="/action_page.php" style="border:1px solid #ccc">
+<form (ngSubmit)="onSubmit()" #incomeForm="ngForm" style="border:1px solid #ccc">
   <div class="container">
     <h1>Edit Income Form</h1>
     <hr>
 
     <label for="username"><b>Date</b></label>
-    <input type="date" placeholder="Enter Date" name="date" required>
+    <input type="date" placeholder="Enter Date" name="date" id="date" required [(ngModel)]="incomes.date" #date="ngModel"  required>
 
     <label for="username"><b>Description</b></label>
-    <input type="text" placeholder="Enter Description" name="description" required>
+    <input type="text" placeholder="Enter Description" name="description" id="description" required [(ngModel)]="incomes.description" #description="ngModel"  required>
 
     <label for="username"><b>Amount</b></label>
-    <input type="number" placeholder="Enter Amount" name="amount" required>
+    <input type="number" placeholder="Enter Amount" name="amount" id="amount" required [(ngModel)]="incomes.amount" #amount="ngModel"  required>
 
     <label for="username"><b>Income Category</b></label>
-    <select name="category_income">
-        <option>Enter Income Category</option>
-    </select>
+    <input type="number" placeholder="Enter Income Category" name="category_income" id="category_income" required [(ngModel)]="incomes.category_income" #category_income="ngModel" required>
     <div class="clearfix">
-      <button type="submit" class="signupbtn">Submit</button>
+      <button type="submit" class="signupbtn" [disabled]="!incomeForm.form.valid">Submit</button>
     </div>
   </div>
 </form>

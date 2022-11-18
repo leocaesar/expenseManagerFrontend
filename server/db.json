@@ -21,12 +21,12 @@
     {
       "id": 1,
       "date": "2022-11-23 01:00:00",
-      "description": "Undangan Nikah Galih",
+      "description": "Undangan Nikah Galih Ratna",
       "amount": 300000,
       "category_income": 2
     },
     {
-      "id": 1,
+      "id": 2,
       "date": "2022-11-23 01:00:00",
       "description": "Gaji Bulan November",
       "amount": 4000000,
@@ -37,14 +37,14 @@
       "description": "lunna",
       "amount": 1,
       "category_income": 1,
-      "id": 2
+      "id": 3
     },
     {
-      "date": "2022-11-09",
-      "description": "ww",
-      "amount": 11,
-      "category_income": 1,
-      "id": 3
+      "date": "2022-11-17",
+      "description": "soso",
+      "amount": 12,
+      "category_income": 12,
+      "id": 5
     }
   ]
 }

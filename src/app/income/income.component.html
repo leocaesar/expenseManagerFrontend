@@ -21,6 +21,7 @@
     <div class="clearfix">
       <button type="submit" class="signupbtn" [disabled]="!incomeForm.form.valid">Submit</button>
     </div>
+    <app-income-list *ngFor="let income of incomes" [income]="income"></app-income-list>
   </div>
 </form>
 

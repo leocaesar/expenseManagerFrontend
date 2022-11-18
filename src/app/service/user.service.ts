@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class  UserService {
 
-  private url: string = 'localhost:8080/api/users';
+  private url: string = 'http://localhost:3005/users';
 
   constructor(private http: HttpClient) { }
   httpOptions = {

@@ -46,5 +46,22 @@
       "category_income": 12,
       "id": 5
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "luna",
+      "password": "luna"
+    },
+    {
+      "id": 2,
+      "username": "useria",
+      "password": "useria"
+    },
+    {
+      "username": "mesayu_bn",
+      "password": "mesayu_bn",
+      "id": 3
+    }
   ]
 }

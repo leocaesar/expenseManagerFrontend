@@ -2,22 +2,23 @@
 <html>
 <body>
 
-<form action="/action_page.php" style="border:1px solid #ccc">
+<form (ngSubmit)="onSubmit()" #userSettingsForm="ngForm" style="border:1px solid #ccc">
   <div class="container">
     <h1>User Settings</h1>
     <hr>
 
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required [(ngModel)]="users.username" #username="ngModel" required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
+    <input type="password" placeholder="Enter Password" name="password" id="password" required [(ngModel)]="users.password" #password="ngModel" required required>
+<!-- 
     <label for="password"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password2" required>
+    <input type="password" placeholder="Enter Password" name="password2" required> -->
 
     <div class="clearfix">
-      <button type="submit" class="signupbtn" style="width: 100%;">Submit</button>
+      <!-- <button type="submit" class="signupbtn" style="width: 100%;" [disabled]="!userSettings.form.valid">Submit</button> -->
+      <button type="submit" class="signupbtn" style="width: 100%;" [disabled]="!userSettingsForm.form.valid">Submit</button>
     </div>
   </div>
 </form>

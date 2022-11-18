@@ -62,6 +62,7 @@ export class RegisterComponent implements OnInit {
     this.userService.addUserService({ username, password } as User)
       .subscribe(user => {
         this.users.push(user)
+        alert("SUKSES")
       })
   }
 

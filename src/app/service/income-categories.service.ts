@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class IncomeCategoriesService {
 
-  private url: string = 'http://localhost:3005/income-categories';
+  private url: string = 'http://localhost:8080/api/income-categories';
 
   constructor(private http: HttpClient) { }
   httpOptions = {
@@ -36,7 +36,7 @@ export class IncomeCategoriesService {
 
   editIncomeCategoriesService(id: number,incomeCategories: IncomeCategories): Observable<IncomeCategories> {
     const urlByID = `${this.url}/${id}`
-    //const urlByID = `${this.url}/${incomeCategories.id as number}` => tanpa param id 
+    //const urlByID = `${this.url}/${incomeCategories.id as number}` => tanpa param id
     return this.http.put<IncomeCategories>(urlByID, incomeCategories,this.httpOptions)
   }
 }

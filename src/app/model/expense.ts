@@ -9,10 +9,9 @@ export interface Expense {
   expenseCategories:ExpenseCategories;
 }
 
-export class Expense{
+export class ExpenseModel{
   constructor(
     public id: number,
-    public date: Timestamp<any>,
     public description: string,
     public amount: number,
     public expenseCategories:ExpenseCategories

@@ -23,7 +23,11 @@ export class ExpenseComponent implements OnInit {
   getExpense(): void {
     this.expenseService.getExpense()
       .subscribe(listExpense => this.listExpense = listExpense);
-    console.log("getexpense")
+  }
+
+  addExpense():void{
+    console.log("addexpense")
+    this.route.navigate(['/addexpense'])
   }
 
 }

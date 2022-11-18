@@ -1,10 +1,11 @@
+<button (click)="addExpense()">ADD</button>
 <div *ngFor="let expense of listExpense">
   <ul class="list-group ">
     <li class="list-group-item list-group-item-dark">{{expense.id}}</li>
     <li class="list-group-item list-group-item-dark">{{expense.date}}</li>
     <li class="list-group-item list-group-item-dark">{{expense.description}}</li>
     <li class="list-group-item list-group-item-dark">{{expense.amount}}</li>
-<!--    <li class="list-group-item list-group-item-dark">{{expense.expenseCategories}}</li>-->
+    <li class="list-group-item list-group-item-dark">{{expense.expenseCategories.name}}</li>
 <!--    <li class="list-group-item list-group-item-dark">-->
 <!--      <button class="btn btn-warning" (click)="updateExpense(expense.id)">Update</button>-->
 <!--    </li>-->

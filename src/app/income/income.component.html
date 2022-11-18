@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form (ngSubmit)="onSubmit()" #incomeForm="ngForm" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Income Form</h1>
+    <hr>
+
+    <label for="username"><b>Date</b></label>
+    <input type="date" placeholder="Enter Date" name="date" id="date" required [(ngModel)]="modelIncome.date" #date="ngModel" required>
+
+    <label for="username"><b>Description</b></label>
+    <input type="text" placeholder="Enter Description" name="description" id="description" required [(ngModel)]="modelIncome.description" #description="ngModel" required>
+
+    <label for="username"><b>Amount</b></label>
+    <input type="number" placeholder="Enter Amount" name="amount" id="amount" required [(ngModel)]="modelIncome.amount" #amount="ngModel" required>
+
+    <label for="username"><b>Income Category</b></label>
+    <input type="number" placeholder="Enter Income Category" name="category_income" id="category_income" required [(ngModel)]="modelIncome.category_income" #category_income="ngModel" required>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" [disabled]="!incomeForm.form.valid">Submit</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+<body>
+
+<form style="border:1px solid #ccc" (ngSubmit)="onSubmit()" #incomeCategoriesForm="ngForm">
+  <div class="container">
+    <h1>Edit Income Categories</h1>
+    <hr>
+
+    <label for="username"><b>Description</b></label>
+    <input type="text" placeholder="Enter Description" name="name"  id="name" required [(ngModel)]="incomeCategories.name" #name="ngModel"  required>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" [disabled]="!incomeCategoriesForm.form.valid">Submit</button>
+    </div>
+    <app-income-categories-list *ngFor="let incomeCategory of incomeCategories2" [incomeCategory]="incomeCategory"></app-income-categories-list>
+  </div>
+</form>
+
+</body>
+</html>

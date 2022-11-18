@@ -1,0 +1,18 @@
+  <h3>Income Categories List</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{incomeCategory.name}}</td>
+        <td>
+            <button type="button" class="editbtn" (click)="sendEdit(incomeCategory.id)">Edit</button>
+            <button type="button" class="deletebtn" (click)="sendDelete(incomeCategory.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

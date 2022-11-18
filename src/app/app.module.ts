@@ -9,13 +9,33 @@ import { HttpClientModule } from "@angular/common/http";
 import { ExpenseComponent } from './expense/expense.component';
 import { ExpenseCategoriesComponent } from './expense-categories/expense-categories.component';
 import { BalancesComponent } from './balances/balances.component';
+import { IncomeComponent } from './income/income.component';
+import { IncomeCategoriesComponent } from './income-categories/income-categories.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
+import { IncomeCategoriesListComponent } from './income-categories-list/income-categories-list.component';
+import { IncomeCategoriesEditComponent } from './income-categories-edit/income-categories-edit.component';
+import { IncomeListComponent } from './income-list/income-list.component';
+import { IncomeEditComponent } from './income-edit/income-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExpenseComponent,
     ExpenseCategoriesComponent,
-    BalancesComponent
+    BalancesComponent,
+    IncomeComponent,
+    IncomeCategoriesComponent,
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent,
+    UserSettingsComponent,
+    IncomeCategoriesEditComponent,
+    IncomeListComponent,
+    IncomeEditComponent,
+    IncomeCategoriesListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+{
+  "income-categories": [
+    {
+      "id": 1,
+      "name": "Gaji Pacar 12"
+    },
+    {
+      "id": 2,
+      "name": "Gaji Pacar 2"
+    },
+    {
+      "name": "lun14",
+      "id": 3
+    },
+    {
+      "name": "jiji",
+      "id": 4
+    }
+  ],
+  "income": [
+    {
+      "id": 1,
+      "date": "2022-11-23 01:00:00",
+      "description": "Undangan Nikah Galih",
+      "amount": 300000,
+      "category_income": 2
+    },
+    {
+      "id": 1,
+      "date": "2022-11-23 01:00:00",
+      "description": "Gaji Bulan November",
+      "amount": 4000000,
+      "category_income": 1
+    },
+    {
+      "date": "2022-11-10",
+      "description": "lunna",
+      "amount": 1,
+      "category_income": 1,
+      "id": 2
+    },
+    {
+      "date": "2022-11-09",
+      "description": "ww",
+      "amount": 11,
+      "category_income": 1,
+      "id": 3
+    }
+  ]
+}

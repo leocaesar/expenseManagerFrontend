@@ -8,7 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class IncomeService {
 
-  private url: string = 'http://localhost:3005/income';
+  // private url: string = 'http://localhost:3005/income';
+  private url: string = 'http://localhost:8080/api/income';
 
   constructor(private http: HttpClient) { }
   httpOptions = {

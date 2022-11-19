@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
 import { ExpenseComponent } from './expense/expense.component';
 import { ExpenseCategoriesComponent } from './expense-categories/expense-categories.component';
 import { BalancesComponent } from './balances/balances.component';
@@ -19,6 +18,9 @@ import { IncomeCategoriesListComponent } from './income-categories-list/income-c
 import { IncomeCategoriesEditComponent } from './income-categories-edit/income-categories-edit.component';
 import { IncomeListComponent } from './income-list/income-list.component';
 import { IncomeEditComponent } from './income-edit/income-edit.component';
+import { LogoutComponent } from './logout/logout.component';
+import { HttpInterceptorService } from './service/http-interceptor.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { IncomeEditComponent } from './income-edit/income-edit.component';
     IncomeCategoriesEditComponent,
     IncomeListComponent,
     IncomeEditComponent,
-    IncomeCategoriesListComponent
+    IncomeCategoriesListComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,13 @@ import { IncomeEditComponent } from './income-edit/income-edit.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

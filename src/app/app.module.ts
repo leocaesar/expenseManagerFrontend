@@ -19,6 +19,11 @@ import { IncomeCategoriesListComponent } from './income-categories-list/income-c
 import { IncomeCategoriesEditComponent } from './income-categories-edit/income-categories-edit.component';
 import { IncomeListComponent } from './income-list/income-list.component';
 import { IncomeEditComponent } from './income-edit/income-edit.component';
+import {EditExpenseComponent} from "./edit-expense/edit-expense.component";
+import {AddExpenseCategoriesComponent} from "./add-expense-categories/add-expense-categories.component";
+import {AddExpenseComponent} from "./add-expense/add-expense.component";
+import { BalancesMonthComponent } from './balances-month/balances-month.component';
+import { BalancesYearComponent } from './balances-year/balances-year.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { IncomeEditComponent } from './income-edit/income-edit.component';
     IncomeCategoriesEditComponent,
     IncomeListComponent,
     IncomeEditComponent,
-    IncomeCategoriesListComponent
+    IncomeCategoriesListComponent,
+    AddExpenseComponent,
+    EditExpenseComponent,
+    AddExpenseCategoriesComponent,
+    BalancesMonthComponent,
+    BalancesYearComponent
   ],
   imports: [
     BrowserModule,

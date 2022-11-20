@@ -56,6 +56,7 @@ export class IncomeCategoriesEditComponent implements OnInit {
     this.incomeCategoriesService.editIncomeCategoriesService(this.incomeCategories.id,this.incomeCategories)
       .subscribe(incomeCategories => {
         alert("SUKSES")
+      this.router.navigateByUrl('/income-categories');
       })
   }
   getIncomeCategories2(): void {

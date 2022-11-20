@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Income, IncomeModel } from '../model/income';
 import { IncomeService } from '../service/income.service';
 import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-income',
@@ -21,7 +22,7 @@ export class IncomeComponent implements OnInit {
   modelIncome = new IncomeModel('','',0,0)
   submitted = false;
 
-  constructor(private incomeService: IncomeService, private location: Location) { }
+  constructor(private incomeService: IncomeService, private location: Location,private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getIncomes()
@@ -61,6 +62,7 @@ export class IncomeComponent implements OnInit {
       .subscribe(income => {
         this.incomes.push(income)
         alert("SUKSES")
+        this.router.navigateByUrl('/income');
       })
   }
 

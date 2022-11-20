@@ -22,7 +22,8 @@ const routes: Routes = [
   {path: "register",component:RegisterComponent},
   {path: "login",component:LoginComponent},
   {path: 'dashboard',component:DashboardComponent},
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //jika gaada path langsung mengarah ke dashboard
+  {path: '', component: LoginComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full' }, //jika gaada path langsung mengarah ke dashboard
   {path: "income",component:IncomeComponent},
   {path: "income-edit/:id",component:IncomeEditComponent},
   {path: "income-list",component:IncomeListComponent},

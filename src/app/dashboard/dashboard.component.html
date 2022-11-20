@@ -1,14 +1,80 @@
-<div class="container">
-<nav>
-    <a routerLink="/register">Register</a><br>
-    <a routerLink="/income-list">Halaman Income</a><br>
+<app-logout></app-logout><br>
+<!-- <a routerLink="/register">Register</a><br>
+    <a routerLink="/income">Halaman Income</a><br>
     <a routerLink="/income-categories">Halaman Income Categories</a><br>
-  <a routerLink="/expense">Halaman Expense</a><br>
-  <a routerLink="/expense-categories">Halaman Expense Categories</a><br>
-  <a routerLink="/balances">Halaman Balances</a><br>
-  <a routerLink="/balances-month">Halaman Balances Monthly</a><br>
-  <a routerLink="/balances-year">Halaman Balances Yearly</a><br>
-    <a routerLink="/user-settings">Halaman User Settings</a><br>
-    <a routerLink="#">Logout</a>
-</nav>
+    <a routerLink="/user-settings">Halaman User Settings</a><br> -->
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <img src="../assets/profit.png" alt="rover"/>
+        </div>
+        <div class="card-body">
+            <span class="tag tag-income">Income</span>
+            <h1>
+               Total Income
+            </h1>
+            <p>
+                Total income for this month
+            </p>
+            <h1 *ngFor="let totalIncome of total">
+               Rp. {{totalIncome.amount}},00
+             </h1>
+        </div>
+    </div>  
+    <div class="card">
+        <div class="card-header">
+            <img src="../assets/loss.png" alt="rover"/>
+        </div>
+        <div class="card-body">
+            <span class="tag tag-expense">Expense</span>
+            <h1>
+                Total Expenses
+             </h1>
+            <p>
+                Total expenses for this month
+            </p>
+            <h1 *ngFor="let totalExpense of total2">
+                Rp. {{totalExpense.amount}},00
+              </h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="../assets/financial-profit.png" alt="rover" />
+        </div>
+        <div class="card-body">
+            <span class="tag tag-income">Income</span>
+            <h1>
+                Biggest Income
+             </h1>
+            <p *ngFor="let maxIncome of max">
+                Biggest income of the month<br>
+               {{maxIncome.date}} | {{maxIncome.description}}
+            </p>
+            <h1 *ngFor="let maxIncome of max">
+                Rp. {{maxIncome.amount}},00
+             </h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="../assets/expenses.png" alt="rover" />
+        </div>
+        <div class="card-body">
+            <span class="tag tag-expense">Expense</span>
+            <h1>
+                Biggest Expense
+             </h1>
+             <p *ngFor="let maxExpense of max2">
+                Biggest expense of the month<br>
+               {{maxExpense.date}} | {{maxExpense.description}}
+            </p>
+            <h1 *ngFor="let maxExpense of max2">
+                Rp. {{maxExpense.amount}},00
+             </h1>
+        </div>
+    </div>
+    
 </div>
+
+    

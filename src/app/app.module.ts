@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
 import { ExpenseComponent } from './expense/expense.component';
 import { ExpenseCategoriesComponent } from './expense-categories/expense-categories.component';
 import { BalancesComponent } from './balances/balances.component';
@@ -19,11 +18,9 @@ import { IncomeCategoriesListComponent } from './income-categories-list/income-c
 import { IncomeCategoriesEditComponent } from './income-categories-edit/income-categories-edit.component';
 import { IncomeListComponent } from './income-list/income-list.component';
 import { IncomeEditComponent } from './income-edit/income-edit.component';
-import {EditExpenseComponent} from "./edit-expense/edit-expense.component";
-import {AddExpenseCategoriesComponent} from "./add-expense-categories/add-expense-categories.component";
-import {AddExpenseComponent} from "./add-expense/add-expense.component";
-import { BalancesMonthComponent } from './balances-month/balances-month.component';
-import { BalancesYearComponent } from './balances-year/balances-year.component';
+import { LogoutComponent } from './logout/logout.component';
+import { HttpInterceptorService } from './service/http-interceptor.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,11 +38,7 @@ import { BalancesYearComponent } from './balances-year/balances-year.component';
     IncomeListComponent,
     IncomeEditComponent,
     IncomeCategoriesListComponent,
-    AddExpenseComponent,
-    EditExpenseComponent,
-    AddExpenseCategoriesComponent,
-    BalancesMonthComponent,
-    BalancesYearComponent
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +46,13 @@ import { BalancesYearComponent } from './balances-year/balances-year.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

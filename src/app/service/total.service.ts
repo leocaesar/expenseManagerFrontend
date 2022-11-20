@@ -8,16 +8,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class TotalService {
 
-  private url: string = 'http://localhost:8080/api/total_income';
+  private url: string = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) { }
 
   getTotalIncome(): Observable<Total[]> {
-    return this.http.get<Total[]>(this.url);
+    return this.http.get<Total[]>(this.url+"/total_income");
   }
 
-  // getPosts(){
-  //   return this.http.get(this.url);
-  // }
+  getTotalExpense(): Observable<Total[]> {
+    return this.http.get<Total[]>(this.url+"/total_expense");
+  }
 
 }

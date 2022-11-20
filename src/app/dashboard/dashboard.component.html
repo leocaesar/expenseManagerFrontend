@@ -16,14 +16,9 @@
             <p>
                 Total income for this month
             </p>
-            <h1>
-               Rp. ,00
+            <h1 *ngFor="let totalIncome of total">
+               Rp. {{totalIncome.amount}},00
              </h1>
-             <table>
-                <tr ngFor="let total of totalData">
-                    <td>{{totalData.amount}}</td>
-                </tr>
-             </table>
         </div>
     </div>  
     <div class="card">
@@ -38,9 +33,9 @@
             <p>
                 Total expenses for this month
             </p>
-            <h1>
-                Rp. 30000,00
-             </h1>
+            <h1 *ngFor="let totalExpense of total2">
+                Rp. {{totalExpense.amount}},00
+              </h1>
         </div>
     </div>
     <div class="card">
@@ -52,12 +47,12 @@
             <h1>
                 Biggest Income
              </h1>
-            <p>
+            <p *ngFor="let maxIncome of max">
                 Biggest income of the month<br>
-                2022-11-06 12:33:00 | Gaji Bulan November
+               {{maxIncome.date}} | {{maxIncome.description}}
             </p>
-            <h1>
-                Rp. 5000000,00
+            <h1 *ngFor="let maxIncome of max">
+                Rp. {{maxIncome.amount}},00
              </h1>
         </div>
     </div>
@@ -70,12 +65,12 @@
             <h1>
                 Biggest Expense
              </h1>
-            <p>
-                Biggest expense of the month <br>
-                2022-11-06 12:33:00 | Sushi
+             <p *ngFor="let maxExpense of max2">
+                Biggest expense of the month<br>
+               {{maxExpense.date}} | {{maxExpense.description}}
             </p>
-            <h1>
-                Rp. 40000,00
+            <h1 *ngFor="let maxExpense of max2">
+                Rp. {{maxExpense.amount}},00
              </h1>
         </div>
     </div>

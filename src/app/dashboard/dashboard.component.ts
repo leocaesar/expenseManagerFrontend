@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Total, TotalModel } from '../model/total';
 import { TotalService } from '../service/total.service';
 import { Location } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,8 @@ import { Location } from '@angular/common';
 export class DashboardComponent implements OnInit {
 
   searchName: string = "";
-  total: Total[] = [];
+  //total: Total[] = [];
+  totalData : any;
   count: number = 1;
   inc(value: number) {
     this.count = this.count++;
@@ -20,14 +22,15 @@ export class DashboardComponent implements OnInit {
   modelTotal = new TotalModel(0)
   submitted = false;
 
-  constructor(private totalService: TotalService, private location: Location) { }
+  constructor(private totalService: TotalService, private location: Location, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getTotalIncome()
+    // this.getTotalIncome()
+    let resp = this.http.get("http://localhost:8080/api/total_income");
+    resp.subscribe((data)=>this.totalData=data);
   }
-
-  getTotalIncome(): void {
-    this.totalService.getTotalIncome().subscribe(income => this.total = income);
-  }
+  // getTotalIncome(): void {
+  //   this.totalService.getTotalIncome().subscribe(totals => this.total = totals);
+  // }
 
 }

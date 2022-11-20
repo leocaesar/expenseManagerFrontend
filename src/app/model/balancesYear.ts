@@ -1,6 +1,6 @@
 export interface BalancesYear {
   id:number;
-  date: Date;
+  year: string;
   cr_Db: string;
   new_Amount: string;
   balances:number;

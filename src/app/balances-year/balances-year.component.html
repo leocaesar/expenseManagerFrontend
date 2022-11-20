@@ -1,15 +1,29 @@
-<div *ngFor="let balances of listBalancesYear">
-  <ul class="list-group ">
-    <li class="list-group-item list-group-item-dark">{{balances.id}}</li>
-    <li class="list-group-item list-group-item-dark">{{balances.date}}</li>
-    <li class="list-group-item list-group-item-dark">{{balances.cr_Db}}</li>
-    <li class="list-group-item list-group-item-dark">{{balances.new_Amount}}</li>
-    <li class="list-group-item list-group-item-dark">{{balances.balances}}</li>
-    <!--    <li class="list-group-item list-group-item-dark">-->
-    <!--      <button class="btn btn-warning" (click)="updateExpense(balances.id)">Update</button>-->
-    <!--    </li>-->
-    <!--    <li class="list-group-item list-group-item-dark">-->
-    <!--      <button class="btn btn-danger" (click)="deleteExpense(balances.id)">Delete</button>-->
-    <!--    </li>-->
-  </ul>
+
+<app-logout></app-logout>
+<div class="container">
+  <h1>Balances Year</h1>
+  <hr>
+
+  <div >
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Date</th>
+        <th>CR_DB</th>
+        <th>New Amount</th>
+        <th>Balances</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let balances of listBalancesYear">
+        <td>{{balances.id}}</td>
+        <td>{{balances.year}}</td>
+        <td>{{balances.cr_Db}}</td>
+        <td>{{balances.new_Amount}}</td>
+        <td>{{balances.balances}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

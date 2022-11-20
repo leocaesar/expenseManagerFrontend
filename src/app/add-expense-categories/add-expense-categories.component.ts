@@ -15,7 +15,7 @@ export class AddExpenseCategoriesComponent implements OnInit {
 
   submitted = false;
   listExpenseCategories:ExpenseCategories[]=[];
-  expenseCategoriesModel = new ExpenseCategoriesModel(0, "")
+  expenseCategoriesModel = new ExpenseCategoriesModel( "")
 
   constructor(private expenseService: ExpenseCategoriesService, private router: ActivatedRoute, private route: Router, private location: Location) { }
 

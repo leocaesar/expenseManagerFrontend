@@ -3,10 +3,10 @@ import {ExpenseCategories} from "./expenseCategories";
 
 export interface Expense {
   id:number;
-  date: Timestamp<any>;
+  date: Date;
   description: string;
   amount: number;
-  expenseCategories:ExpenseCategories;
+  category_expense:number;
 }
 
 export class ExpenseModel{
@@ -14,7 +14,7 @@ export class ExpenseModel{
     public id: number,
     public description: string,
     public amount: number,
-    public expenseCategories:ExpenseCategories
+    public category_expense:number
   ) {
   }
 }

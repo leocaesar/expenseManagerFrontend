@@ -1,13 +1,47 @@
-<button (click)="addExpenseCategories()">ADD</button>
-<div *ngFor="let expenseCategories of listExpenseCategories">
-  <ul class="list-group ">
-    <li class="list-group-item list-group-item-dark">{{expenseCategories.id}}</li>
-    <li class="list-group-item list-group-item-dark">{{expenseCategories.name}}</li>
-    <!--    <li class="list-group-item list-group-item-dark">-->
-    <!--      <button class="btn btn-warning" (click)="updateExpense(expenseCategories.id)">Update</button>-->
-    <!--    </li>-->
-    <!--    <li class="list-group-item list-group-item-dark">-->
-    <!--      <button class="btn btn-danger" (click)="deleteExpense(expenseCategories.id)">Delete</button>-->
-    <!--    </li>-->
-  </ul>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<app-logout></app-logout>
+<form (ngSubmit)="onSubmit()" #incomeCategoriesForm="ngForm" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Income Categories Form</h1>
+    <hr>
+
+    <label for="Description"><b>Description</b></label>
+    <input type="text" placeholder="Enter Description" name="name" id="name" required [(ngModel)]="modelExpenseCategories.name" #name="ngModel" required>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" [disabled]="!incomeCategoriesForm.form.valid">Submit</button>
+    </div>
+    <div >
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let expenseCategories of expenseCategories">
+          <td>{{expenseCategories.name}}</td>
+          <td>
+<!--            <button type="button" class="editbtn" (click)="sendEdit(expenseCategories.id)">Edit</button>-->
+            <button type="button" class="deletebtn" (click)="onDelete(expenseCategories.id)">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
+
+<!--<button (click)="addExpenseCategories()">ADD</button>-->
+

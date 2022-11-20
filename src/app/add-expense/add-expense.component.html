@@ -1,40 +1,40 @@
-<div>
-  <div [hidden]="submitted">
-    <h1>Expense form</h1>
-    <form (ngSubmit)="onSubmit()" #karyawanForm="ngForm">
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input type="text" class="" id="description" required [(ngModel)]="expenseModel.description" name="description" #description="ngModel">
-        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-          LastName is required
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="amount">Amount</label>
-        <input class="" type="number" id="amount" required [(ngModel)]="expenseModel.amount" name="amount" #amount="ngModel">
-        <div [hidden]="amount.valid || amount.pristine" class="alert alert-danger">
-          Phone is required
-        </div>
-      </div>
+<!--<div>-->
+<!--  <div [hidden]="submitted">-->
+<!--    <h1>Expense form</h1>-->
+<!--    <form (ngSubmit)="onSubmit()" #karyawanForm="ngForm">-->
+<!--      <div class="form-group">-->
+<!--        <label for="description">Description</label>-->
+<!--        <input type="text" class="" id="description" required [(ngModel)]="expenseModel.description" name="description" #description="ngModel">-->
+<!--        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">-->
+<!--          LastName is required-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="amount">Amount</label>-->
+<!--        <input class="" type="number" id="amount" required [(ngModel)]="expenseModel.amount" name="amount" #amount="ngModel">-->
+<!--        <div [hidden]="amount.valid || amount.pristine" class="alert alert-danger">-->
+<!--          Phone is required-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="form-group">
-        <label for="expensecategories">Categories</label>
-        <input class="" type="text" id="expensecategories" required [(ngModel)]="expenseModel.expenseCategories.name" name="expensecategories" #expensecategories="ngModel">
-        <div [hidden]="expensecategories.valid || expensecategories.pristine" class="alert alert-danger">
-          Phone is required
-        </div>
-      </div>
+<!--      <div class="form-group">-->
+<!--        <label for="expensecategories">Categories</label>-->
+<!--        <input class="" type="text" id="expensecategories" required [(ngModel)]="expenseModel.expenseCategories.name" name="expensecategories" #expensecategories="ngModel">-->
+<!--        <div [hidden]="expensecategories.valid || expensecategories.pristine" class="alert alert-danger">-->
+<!--          Phone is required-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <button type="submit" class="btn btn-success" [disabled]="!karyawanForm.form.valid">
-        Submit
-      </button>
-    </form>
-  </div>
-  <!--  <div [hidden]="!submitted">-->
-  <!--    <h2>Berikut adalah data yang sudah anda kirim</h2>-->
-  <!--    <div class="">-->
-  <!--      <div>Name</div>-->
-  <!--      <div>{{expenseModel.name}}</div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-</div>
+<!--      <button type="submit" class="btn btn-success" [disabled]="!karyawanForm.form.valid">-->
+<!--        Submit-->
+<!--      </button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  <div [hidden]="!submitted">&ndash;&gt;-->
+<!--  &lt;!&ndash;    <h2>Berikut adalah data yang sudah anda kirim</h2>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <div class="">&ndash;&gt;-->
+<!--  &lt;!&ndash;      <div>Name</div>&ndash;&gt;-->
+<!--  &lt;!&ndash;      <div>{{expenseModel.name}}</div>&ndash;&gt;-->
+<!--  &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+<!--</div>-->

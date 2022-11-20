@@ -21,13 +21,21 @@ import { IncomeEditComponent } from './income-edit/income-edit.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpInterceptorService } from './service/http-interceptor.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {AddExpenseComponent} from "./add-expense/add-expense.component";
+import {AddExpenseCategoriesComponent} from "./add-expense-categories/add-expense-categories.component";
+import {BalancesMonthComponent} from "./balances-month/balances-month.component";
+import {BalancesYearComponent} from "./balances-year/balances-year.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    AddExpenseComponent,
+    AddExpenseCategoriesComponent,
     ExpenseComponent,
     ExpenseCategoriesComponent,
     BalancesComponent,
+    BalancesMonthComponent,
+    BalancesYearComponent,
     IncomeComponent,
     IncomeCategoriesComponent,
     LoginComponent,

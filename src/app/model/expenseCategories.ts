@@ -1,12 +1,11 @@
 export interface ExpenseCategories {
-  id:number;
+  id:bigint;
   name: string;
 }
 
 
 export class ExpenseCategoriesModel{
   constructor(
-    public id: number,
     public name: string,
   ) {
   }

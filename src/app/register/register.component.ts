@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { User, UserModel } from '../model/user';
 import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -21,7 +22,7 @@ export class RegisterComponent implements OnInit {
   modelUser = new UserModel('', '')
   submitted = false;
 
-  constructor(private userService: UserService, private location: Location) { }
+  constructor(private userService: UserService, private location: Location,private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
     this.getUsers()
@@ -63,6 +64,7 @@ export class RegisterComponent implements OnInit {
       .subscribe(user => {
         this.users.push(user)
         alert("SUKSES")
+        this.router.navigateByUrl('/login');
       })
   }
 
